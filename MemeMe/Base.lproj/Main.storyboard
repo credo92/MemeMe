@@ -70,6 +70,7 @@
                     <connections>
                         <outlet property="bottomField" destination="y0u-P2-eH4" id="XJ9-TA-Q7F"/>
                         <outlet property="cameraButton" destination="9nU-GW-aFO" id="vXX-Fa-0mh"/>
+                        <outlet property="image" destination="7n9-iw-yIL" id="h2c-ag-2bd"/>
                         <outlet property="imagePickerView" destination="7n9-iw-yIL" id="n8b-p8-Zn9"/>
                         <outlet property="topField" destination="nPq-Rr-qCd" id="Hdp-5O-cTW"/>
                     </connections>

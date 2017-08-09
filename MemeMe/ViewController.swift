@@ -17,15 +17,17 @@ import UIKit
 //
 //}
 
-struct Meme {
-    var textField1: String
-    var textField2: String
-    var image: UIImage!
-    var memedImage: UIImage!
-}
+var memedImage: UIImage! = nil
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavigationControllerDelegate {
-
+    
+    struct Meme {
+        var textField1: String
+        var textField2: String
+        var originalImage: UIImage?
+        var memedImage: UIImage?
+    }
+    
     @IBAction func pickImage(_ sender: Any) {
         
         let imageController = UIImagePickerController()
@@ -43,6 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         
     }
   
+    @IBOutlet var image: UIImageView!
     @IBOutlet var bottomField: UITextField!
     @IBOutlet var topField: UITextField!
     @IBOutlet var cameraButton: UIBarButtonItem!
@@ -60,7 +63,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
-        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+         memedImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return memedImage
@@ -111,7 +114,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
    
     func save() {
         // Create the meme
-        let meme = Meme(topText: topField.text!, bottomText: bottomField.text!, originalImage: UIImageView.image!, memedImage: memedImage)
+        let meme = Meme(textField1: topField.text!, textField2: bottomField.text!, originalImage: image.image, memedImage: memedImage)
     }
 
 
