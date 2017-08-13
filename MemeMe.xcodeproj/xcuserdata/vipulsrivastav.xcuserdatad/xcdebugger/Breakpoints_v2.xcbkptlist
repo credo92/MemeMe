@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/ViewController.swift"
@@ -17,14 +17,14 @@
             endingLineNumber = "15">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "globalinit_33_4C043CCEFF0CBDBEC4B99B9F45E6CB21_func0"
                   moduleName = "MemeMe"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vipulsrivastav/Documents/workspace/MemeMe/MemeMe/ViewController.swift"
-                  timestampString = "523950079.244267"
+                  timestampString = "524276966.190829"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"
@@ -32,14 +32,14 @@
                   offsetFromSymbolStart = "8">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "MemeMe.memedImage.unsafeMutableAddressor : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImage&gt;"
+                  symbolName = "MemeMe.memedImage.unsafeMutableAddressor : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
                   moduleName = "MemeMe"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vipulsrivastav/Documents/workspace/MemeMe/MemeMe/ViewController.swift"
-                  timestampString = "523950079.249145"
+                  timestampString = "524276966.194048"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "20"

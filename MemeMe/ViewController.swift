@@ -63,7 +63,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
-         memedImage = UIGraphicsGetImageFromCurrentImageContext()!
+        memedImage  = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
         return memedImage
@@ -111,10 +111,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
 
     }
-   
+    @IBOutlet var sharebutton: UIButton!
+    @IBAction func share(_ sender: Any) {
+        
+        let image : UIImage = generateMemedImage()
+        if image != nil {
+            sharebutton.isEnabled = true
+        }
+        let activityCtrl = UIActivityViewController.init(activityItems: [image], applicationActivities: nil)
+      
+        present(activityCtrl, animated: true, completion: save)
+        
+        //dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    
+    
     func save() {
         // Create the meme
         let meme = Meme(textField1: topField.text!, textField2: bottomField.text!, originalImage: image.image, memedImage: memedImage)
+        
     }
 
 
