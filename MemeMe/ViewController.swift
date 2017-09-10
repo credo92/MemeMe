@@ -7,15 +7,6 @@
 //
 
 import UIKit
-//
-//struct Meme {
-//    let topText: UITextField,
-//    let bottomText: UITextField,
-//    let  originalImage: UIImageView.image,
-//    let memedImage: memedImage
-//    
-//
-//}
 
 var memedImage: UIImage! = nil
 
@@ -83,6 +74,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         NSStrokeWidthAttributeName: 3.0]
     
     @IBOutlet var imagePickerView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldDidBeginEditing()
@@ -93,6 +85,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         //bottomField.text = "Bottom"
         bottomField.textAlignment = .center
         bottomField.defaultTextAttributes = memeTextAttributes
+       
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -134,6 +127,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate , UINavi
         // Create the meme
         let meme = Meme(textField1: topField.text!, textField2: bottomField.text!, originalImage: image.image, memedImage: memedImage)
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
+        
+        // Add it to the memes array in the Application Delegate
+//         let object = UIApplication.shared.delegate
+//        let appDelegate = object as! AppDelegate
+//        appDelegate.memes.append(meme)
     }
 
 
